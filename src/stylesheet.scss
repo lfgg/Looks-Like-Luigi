@@ -1,0 +1,785 @@
+/* Variables */
+
+$black: #222;
+$blue: #3b527e;
+$brown: #6a523c;
+$darkBlue: #2e4063;
+$darkBrown: #4a3d31;
+$darkGreen: #3a6c33;
+$darkerGreen: #315d2a;
+$green: #46833d;
+$lightGreen: #50a043;
+$warioEye: #424d73;
+$white: #f4f4f4;
+$yellow: #efb944;
+
+/* Base tag styles */
+
+html {
+  font-size: 1em;
+  overflow-x: auto;
+}
+
+body {
+  background: $green url("https://lfgg.jcink.net/uploads/lfgg/fun.png") bottom
+    right no-repeat fixed;
+  color: $white;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+form {
+  display: inline;
+}
+
+/* Use system fonts */
+body,
+input,
+textarea,
+button {
+  font-family: Raleway, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* default input colors */
+input,
+textarea {
+  background-color: $white;
+  color: $black;
+}
+
+/* image tag styles */
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: $yellow;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $brown;
+  text-decoration: underline;
+}
+
+/* Disable post icons */
+
+.pinned-topic-row > td:nth-child(2),
+.topic-subheader > td:nth-child(2),
+.topic-row > td:nth-child(2),
+#post-icon-options {
+  display: none;
+}
+
+/* Screen-reader only text */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Twemoji */
+
+.emoji {
+  max-height: 1em;
+}
+
+/* Content wrapper */
+
+#wrapper {
+  background: $blue;
+  box-shadow: 0 1ch 1em rgba(0, 0, 0, 0.5);
+  margin: 1em auto;
+  max-width: 100%;
+  text-align: left;
+  width: 980px;
+}
+
+#innerwrapper {
+  padding: 0 1ch 1em;
+}
+
+/* Profile styles */
+
+#profilename {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+#photowrap {
+  padding: 1ch;
+}
+
+#phototitle {
+  font-size: 2em;
+}
+
+#photoimg {
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* UserCP/My Controls styles */
+
+#ucpmenu {
+  background-color: $darkBlue;
+  line-height: 1.5em;
+  width: 22%;
+
+  p {
+    margin: 0;
+    padding: 0.25em 1ch;
+  }
+}
+
+#ucpcontent {
+  background-color: $darkBlue;
+  line-height: 1.5em;
+  width: auto;
+
+  p {
+    margin: 0;
+    padding: 0.25em 1ch;
+  }
+}
+
+/* Logo Strip */
+
+#logostrip {
+  display: none;
+}
+
+#logo {
+  text-align: center;
+
+  a {
+    color: $white;
+    font-size: 3em;
+  }
+}
+
+#logo-image {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0 1ch;
+}
+
+/* Navigation Bar / Submenu */
+
+#submenu {
+  background-color: $lightGreen;
+  color: $darkerGreen;
+  font-size: 1em;
+  margin-bottom: 1em;
+
+  img {
+    display: none;
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    color: $darkerGreen;
+  }
+
+  a:hover {
+    color: $green;
+  }
+}
+
+/* removes <br/> after #navstrip */
+#navi br {
+  display: none;
+}
+
+#navstrip {
+  font-weight: bold;
+  padding: 1em 0;
+}
+
+.nav-icon {
+  max-height: 1em;
+  max-width: 1em;
+}
+
+/* Calendar styling */
+
+.caldate {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  text-align: right;
+}
+
+#calendarname {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#padandcenter {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 0 1em 0;
+  text-align: center;
+}
+
+/* User Links Menu (Messages / View new posts / etc ) */
+
+#userlinks {
+  font-size: 0.9em;
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Topic View styles */
+
+.activeuserstrip {
+  background-color: $darkBlue;
+  padding: 0.25em 1ch;
+}
+
+.normalname {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.unreg {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.post1,
+.post2 {
+  background-color: $darkBlue;
+}
+
+.miniprofile {
+  background-color: $warioEye;
+  border-left: 0.5ch solid $darkBlue;
+}
+
+.postdetails {
+  font-size: 1em;
+}
+
+.postcolor {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 1ch;
+  max-width: 80ch;
+}
+
+.postlinksbar {
+  background-color: $darkBlue;
+  font-size: 1em;
+  padding: 0.25em 1ch;
+}
+
+.signature {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* Pagination e.g. [1],2,3 ... */
+
+.pagination {
+  /* stylelint-disable no-descending-specificity */
+  .pagination_current,
+  a {
+    padding: 0.125em 0.5ch;
+  }
+
+  a:link,
+  a:visited {
+    background-color: $yellow;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    color: $brown;
+    text-decoration: none;
+  }
+
+  a:active,
+  a:hover {
+    background: $yellow;
+    box-shadow: none;
+    border: 1px solid #000;
+    color: $brown;
+    text-decoration: none;
+  }
+  /* stylelint-enable no-descending-specificity */
+
+  .pagination_current {
+    background: none repeat scroll 0% 0% #fff;
+  }
+}
+
+.pagination_first,
+.pagination_last,
+.pagination_page {
+  background: none repeat scroll 0% 0% #740300;
+  border: 1px solid $green;
+}
+
+.pagination_pagetxt {
+  display: none;
+}
+
+/* Global general table/div row styles */
+
+.row1,
+.row2,
+.row3,
+.row4 {
+  background-color: $darkBlue;
+}
+
+#boardstats .row2 {
+  text-align: center;
+}
+
+.darkrow1,
+.darkrow2,
+.darkrow3,
+.hlight,
+.dlight {
+  background-color: $darkBlue;
+}
+
+td.darkrow2 {
+  display: none;
+}
+
+.darkrow3 {
+  padding: 0.25em 1ch;
+}
+
+/* Top table bars / gradient holders */
+
+.maintitle {
+  background-color: $lightGreen;
+  color: $darkerGreen;
+  font-weight: bold;
+  padding: 0.25em 1ch;
+
+  /* stylelint-disable no-descending-specificity */
+  & a:link,
+  & a:visited,
+  & a:active {
+    color: $darkerGreen;
+  }
+
+  & a:hover {
+    color: $green;
+  }
+  /* stylelint-enable no-descending-specificity */
+}
+
+/* Bar directly below the maintitles */
+
+.titlemedium {
+  background-color: $darkBlue;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.25em 1ch;
+
+  /* stylelint-disable no-descending-specificity */
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: underline;
+  }
+  /* stylelint-enable no-descending-specificity */
+}
+
+/* Table & Div Borders */
+
+.tableborder {
+  background-color: $darkBlue;
+  margin: 0;
+  padding: 0;
+}
+
+.tablefill {
+  background-color: $darkBlue;
+  padding: 0.25em 1ch;
+}
+
+.tablepad {
+  background-color: $darkBlue;
+  padding: 0.25em 1ch;
+}
+
+.tablebasic {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.plainborder {
+  background-color: $darkBlue;
+}
+
+/* QUOTE and CODE BBCode boxes */
+
+.quote {
+  background-color: $blue;
+  font-size: 1em;
+  margin-top: 0.25em;
+  padding: 0.25em 1ch;
+  white-space: normal;
+}
+
+.code {
+  background-color: $blue;
+  font-family: Monospace;
+  font-size: 1em;
+  margin-top: 0.25em;
+  padding: 0.25em 1ch;
+  white-space: normal;
+}
+
+/* Input buttons, e.g. submit, text input, etc */
+
+.button-link {
+  margin: 0 0.5ch;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.button-large {
+  margin: 0;
+  min-width: 8ch;
+}
+
+.button-small {
+  margin: 0.25em 0;
+  min-width: 5ch;
+}
+
+.button-large,
+.button-small {
+  background: $yellow;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  color: $brown;
+  display: inline-block;
+  padding: 0.25em 1ch;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+
+  /* Font Awesome Icons */
+  .fab,
+  .fal,
+  .far,
+  .fas {
+    margin-right: 0.5ch;
+  }
+}
+
+.post-buttons-top {
+  margin-top: 0.25em;
+}
+
+.forminput,
+.codebuttons,
+.textinput,
+.radiobutton,
+.checkbox {
+  background: #fff;
+  border: 1px solid $black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset;
+  color: #000;
+  font-size: 1em;
+  padding: 0.25em 1ch;
+  vertical-align: middle;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background: $yellow;
+  border: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  color: $brown;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.25em 1ch;
+  padding: 0.25em 1ch;
+  text-decoration: none;
+}
+
+.codebuttons {
+  font-size: 1em;
+}
+
+/* Form table cell styles, left/right/top */
+
+.pformstrip {
+  background-color: $darkBlue;
+  font-weight: bold;
+  padding: 0.25em 1ch;
+}
+
+.pformleft {
+  background-color: $darkBlue;
+  padding: 0.25em 1ch;
+  width: 25%;
+}
+
+.pformleftw {
+  background-color: $darkBlue;
+  padding: 0.25em 1ch;
+  width: 40%;
+}
+
+.pformright {
+  background-color: $darkBlue;
+  padding: 0.25em 1ch;
+}
+
+/* Tabs on the portal profiles + sections */
+
+.opentab {
+  background-color: $yellow;
+  color: $brown;
+  float: left;
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 1ch;
+  margin-top: 0.25em;
+  padding: 0.25em 1ch;
+  width: auto;
+}
+
+.closedtab {
+  background-color: none;
+  color: $yellow;
+  float: left;
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 1ch;
+  margin-top: 0.25em;
+  padding: 0.25em 1ch;
+  width: auto;
+}
+
+/* Delete all cookies / mark read */
+
+#delcookiesrow,
+#mark-as-read-subto {
+  background-color: $darkBlue;
+  float: right;
+  font-size: 1em;
+  margin: 1em 0;
+  padding: 0.25em 1ch;
+}
+
+#mark-as-read-subto {
+  display: inline-block;
+  float: none;
+}
+
+/* Board Statistics Links */
+
+.toplinks {
+  text-align: center;
+
+  /* stylelint-disable no-descending-specificity */
+  a {
+    font-size: 1em;
+    text-decoration: none;
+  }
+  /* stylelint-enable no-descending-specificity */
+}
+
+/* Mini Profile Seperators */
+
+.postbit {
+  background: $darkBlue;
+  font-size: 1em;
+  padding: 0.25em 1ch;
+}
+
+/* Miscellaneous */
+
+/* Forum Descriptions */
+.desc {
+  font-size: 1em;
+}
+
+/* Edited by text */
+.edit {
+  font-size: 1em;
+}
+
+/* Topic Macros */
+
+.wrapmini {
+  float: left;
+}
+
+/* Skin selector dropdown */
+#skin_selector {
+  margin: 1em 0;
+}
+
+/* Online users list row */
+.thin {
+  border-bottom: 1px solid $warioEye;
+  border-top: 1px solid $warioEye;
+  line-height: 1.5em;
+  margin: 0.25em 0;
+  padding: 0.25em 0;
+}
+
+/* Highlighted text in search */
+.searchlite {
+  background-color: #ff0;
+  color: #f00;
+  font-weight: bold;
+}
+
+/* Mobile specific styles */
+#mobile {
+  background-color: $blue;
+  background-image: none;
+}
+
+/* Copyright */
+.copyright-wrapper {
+  background: $brown;
+  box-sizing: border-box;
+  color: $white;
+  margin: 1ch auto;
+  max-width: 100%;
+  padding: 0.25em 1ch;
+  text-align: center;
+  width: 980px;
+
+  /* stylelint-disable no-descending-specificity */
+  a:hover {
+    color: $darkBrown;
+  }
+  /* stylelint-enable no-descending-specificity */
+}
+
+.copyright {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+a[title="Go to the last post"] {
+  margin-right: 0.25ch;
+}
+
+/* Group */
+.group-staff {
+  color: $lightGreen !important;
+}
+
+.group-validating {
+  font-style: italic;
+}
+
+.group-banned {
+  text-decoration: line-through;
+}
+
+/* Avatars on Moderating Team page */
+/* stylelint-disable no-descending-specificity */
+.imgthumb img {
+  border: none !important;
+  height: auto !important;
+  max-height: 64px;
+  max-width: 64px;
+  width: auto !important;
+}
+/* stylelint-enable no-descending-specificity */
+
+/* Limit user posted images */
+img.attach,
+img[alt="user posted image"] {
+  max-width: 80ch;
+}
+
+/* Limit user photos */
+img[alt="User Photo"] {
+  width: auto !important;
+  height: auto !important;
+  max-width: 16ch;
+}
+
+/* Spoiler Tags */
+.spoiler {
+  color: transparent !important;
+  background-color: $black;
+  padding: 2px;
+  display: inline-block;
+
+  & * {
+    visibility: hidden;
+  }
+
+  &:hover,
+  &:active {
+    color: $white !important;
+
+    & * {
+      visibility: visible;
+    }
+  }
+}
+
+/* Remove some extra space */
+td.row2[width="5%"] {
+  display: none;
+}
+
+/* Remove quick-login label */
+#quick-login strong {
+  display: none;
+}
+
+@media screen and (max-height: 800px) {
+  body {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .miniprofile {
+    display: none;
+  }
+
+  .button-link {
+    &:first-child,
+    &:last-child {
+      margin: 0 0.5ch;
+    }
+  }
+}

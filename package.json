@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "autofix": "npm run prettier && npm run tslint-fix && npm run stylelint-fix",
+    "build": "npm run lint && npm run clean && parcel build src/stylesheet.scss src/script.ts --out-dir dist --cache-dir var/cache --log-level 2 --no-source-maps && npm run make-xml",
+    "clean": "rm -rf dist/*",
+    "lint": "npm run autofix && npm run stylelint && npm run tslint",
+    "tslint": "tslint src/**/*.ts",
+    "tslint-fix": "tslint src/**/*.ts --fix",
+    "make-xml": "node ./createJFHXML.js",
+    "pre-commit": "npm run lint",
+    "prettier": "prettier --write **/*.{{t,j}s{,x,on},{c,sa,sc,le}ss,vue,md,y{,a}ml,graphql}",
+    "stylelint": "stylelint \"./src/**/*.{c,sa,sc,le}ss\"",
+    "stylelint-fix": "stylelint --fix \"./src/**/*.{c,sa,sc,le}ss\"",
+    "watch": "npm run lint && npm run clean && parcel watch src/stylesheet.scss src/script.ts --out-dir dist --cache-dir var/cache --no-autoinstall"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "autoprefixer": "^9.1.5",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.0",
+    "husky": "^1.0.0",
+    "js2xmlparser": "^3.0.0",
+    "node-sass": "^4.9.3",
+    "parcel": "^1.9.7",
+    "postcss": "^7.0.2",
+    "postcss-import": "^12.0.0",
+    "postcss-preset-env": "^6.0.3",
+    "postcss-syntax": "^0.34.0",
+    "prettier": "^1.14.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.1"
+  }
+}
