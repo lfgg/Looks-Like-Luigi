@@ -270,6 +270,8 @@ a:hover {
 .miniprofile {
   background-color: $warioEye;
   border-left: 0.5ch solid $darkBlue;
+  max-width: 200px;
+  min-width: 200px;
 }
 
 .postdetails {
