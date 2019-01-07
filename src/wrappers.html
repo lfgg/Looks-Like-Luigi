@@ -12,6 +12,9 @@
           content="<% TITLE %>" />
     <meta property="og:image" content="https://lfgg.jcink.net/uploads/lfgg/icon.png" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video-tag@beta/dist/video-tag.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/video-tag@beta/dist/video-tag.js"></script>
+
     <script src="//twemoji.maxcdn.com/2/twemoji.min.js?11.2"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -25,6 +28,27 @@
   </head>
 
   <body>
+    <nav id="site-nav" class="c-site-nav">
+      <a class="c-site-nav__item" href="https://lfgg.github.io/about">
+        About
+      </a>
+      <a class="c-site-nav__item" href="https://lfgg.github.io/newsletter">
+        Newsletter
+      </a>
+      <a class="c-site-nav__item" href="https://lfgg.jcink.net">
+        Forum
+      </a>
+      <a class="c-site-nav__item" href="https://discord.gg/W2P3eD5">
+        Discord
+      </a>
+      <a class="c-site-nav__item" href="https://lfgg.github.io/affiliates">
+        Affiliates
+      </a>
+      <a class="c-site-nav__item c-site-nav__item--icon" href="https://twitter.com/OfficialLFGG">
+        <i class="fab fa-twitter"></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+    </nav>
     <div id="logo">
       <a href="index.php">
         <{LOGO}>
@@ -41,6 +65,7 @@
           <% SKIN_SELECTOR %>
         </div>
       </div>
+      <% AFFS %>
     </div>
     <% COPYRIGHT %>
     <div class="copyright-sequel">

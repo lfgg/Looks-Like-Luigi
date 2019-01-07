@@ -4,6 +4,8 @@ $black: #222;
 $blue: #3b527e;
 $brown: #6a523c;
 $darkBlue: #2e4063;
+$newBlue: #1f2c4f;
+$dashBlue: #50618f;
 $darkBrown: #4a3d31;
 $darkGreen: #3a6c33;
 $darkerGreen: #315d2a;
@@ -346,6 +348,7 @@ a:hover {
 .row3,
 .row4 {
   background-color: $darkBlue;
+  border: 1px dashed $dashBlue;
 }
 
 #boardstats .row2 {
@@ -357,7 +360,7 @@ a:hover {
 .darkrow3,
 .hlight,
 .dlight {
-  background-color: $darkBlue;
+  background-color: $newBlue;
 }
 
 td.darkrow2 {
@@ -764,6 +767,17 @@ td.row2[width="5%"] {
 
 /* Remove quick-login label */
 #quick-login strong {
+  display: none;
+}
+
+/* Video tag CSS */
+.video-tag {
+  margin: 1em 1em 1em 0;
+  max-width: 100%;
+}
+
+/* Hide unfinished site-nav */
+#site-nav {
   display: none;
 }
 

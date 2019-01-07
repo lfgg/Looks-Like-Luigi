@@ -4,3 +4,5 @@ extends:
   - tslint-config-prettier
 rules:
   trailing-comma: never
+  no-parameter-reassignment: true
+  prefer-for-of: false

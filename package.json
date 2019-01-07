@@ -2,12 +2,12 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "autofix": "npm run prettier && npm run tslint-fix && npm run stylelint-fix",
+    "autofix": "npm run prettier && npm run eslint-fix && npm run stylelint-fix",
     "build": "npm run lint && npm run clean && parcel build src/stylesheet.scss src/script.ts --out-dir dist --cache-dir var/cache --log-level 2 --no-source-maps && npm run make-xml",
     "clean": "rm -rf dist/*",
-    "lint": "npm run autofix && npm run stylelint && npm run tslint",
-    "tslint": "tslint src/**/*.ts",
-    "tslint-fix": "tslint src/**/*.ts --fix",
+    "lint": "npm run autofix && npm run stylelint && npm run eslint",
+    "eslint": "eslint src/**/*.ts",
+    "eslint-fix": "eslint src/**/*.ts --fix",
     "make-xml": "node ./createJFHXML.js",
     "pre-commit": "npm run lint",
     "prettier": "prettier --write **/*.{{t,j}s{,x,on},{c,sa,sc,le}ss,vue,md,y{,a}ml,graphql}",
@@ -27,6 +27,14 @@
     "autoprefixer": "^9.1.5",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-import-resolver-node": "^0.3.2",
+    "eslint-plugin-compat": "^2.6.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-tslint": "^3.1.0",
     "husky": "^1.0.0",
     "js2xmlparser": "^3.0.0",
     "node-sass": "^4.9.3",
@@ -40,6 +48,23 @@
     "stylelint-config-standard": "^18.2.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
-    "typescript": "^3.2.1"
-  }
+    "typescript": "^3.2.1",
+    "typescript-eslint-parser": "^21.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage"
+        }
+      ]
+    ]
+  },
+  "browserslist": [
+    "> 0.25%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
 }
